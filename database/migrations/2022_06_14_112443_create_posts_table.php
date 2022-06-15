@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id('id');
             $table->string('title')->index()->default('')->comment('標題');
             $table->text('introduce')->nullable()->comment('摘要');
             $table->mediumText('content')->nullable()->comment('内容');
